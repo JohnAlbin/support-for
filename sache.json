@@ -1,0 +1,5 @@
+{
+  "name": "support-for",
+  "description": "A module for Sass module developers to ease conditional browser support.",
+  "tags": ["browser", "support"]
+}
