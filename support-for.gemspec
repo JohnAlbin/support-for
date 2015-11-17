@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/JohnAlbin/support-for'
   spec.rubyforge_project =
 
-  spec.version     = '1.0.1'
+  spec.version     = '1.0.2'
   spec.date        = '2015-11-17'
   spec.licenses    = ['GPL-2']
 
