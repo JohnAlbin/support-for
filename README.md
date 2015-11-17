@@ -1,12 +1,12 @@
 # support-for
 
-The `support-for` module is designed to be used by developers to ease conditional browser support while authoring their Sass module.
+The `support-for` module is designed to be used by Sass authors to ease conditional browser support while creating their Sass module or Sass partial.
 
-Users of a module that uses support-for can specify which browser versions they want to support by setting a simple Sass variable, `$support-for`.
+Authors of Sass code that uses support-for can specify which browser versions they want to support by setting a simple Sass variable, `$support-for`.
 
 Here are some example usages:
 
-1. The Sass developer only wants to support Safari 8 and later (and no other browsers) because he is an asshole.
+1. The Sass author only wants to support Safari 8 and later (and no other browsers) because he is an asshole.
 
 ```scss
 $support-for: (
@@ -20,7 +20,7 @@ $support-for: (
 @import "normalize";
 ```
 
-2. The Sass developer wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She also has to support IE 6 and later because the client hates her.
+2. The Sass author wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She also has to support IE 6 and later because the client hates her.
 
 ```scss
 $support-for: (
@@ -31,7 +31,7 @@ $support-for: (
 @import "normalize";
 ```
 
-3. The Sass developer is working for a government client and every browser version has a specific version specified in the contract.
+3. The Sass author is working for a government client and every browser version has a specific version specified in the contract.
 
 ```scss
 $support-for: (
@@ -46,19 +46,17 @@ $support-for: (
 @import "normalize";
 ```
 
-### Update your Sass partials to use `support-for`
+### Update your Sass partials to use `support-for()`
 
-If a Sass module tells you that it uses `support-for`, you just need to override
-the default value of the $support-for variable before you import that module.
-See the examples above about some of your options.
+If a Sass module tells you that it uses `support-for`, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above about some of your options.
 
-If you want to conditionally include Sass in your CSS output, you can update
-your Sass partials to wrap those lines of CSS with an `@if` block that uses the
-`support-for()` function.
+If, however, you want to conditionally include Sass in your CSS output, you can update your Sass code to wrap those lines of CSS with an `@if` block that uses the `support-for()` function.
 
 ```
 @mixin my-sweet-sweet-mixin($cocoa: lots) {
   border-radius: 100%;
+
+  // Only include this property if we support IE 10.
   @if support-for(ie, 10) {
     // Remove border when applied to an `img` inside an `a` element in IE 8/9/10.
     border: 0;
@@ -67,12 +65,12 @@ your Sass partials to wrap those lines of CSS with an `@if` block that uses the
 ```
 
 If you later drop support for IE 10 (someday!), you just need to update the
-`$support-for` variable and your code will stop outputing the IE-10-specific
+`$support-for` variable and your code will stop outputting the IE-10-specific
 CSS.
 
 ## Updating your module to use `support-for`
 
-If you are a module developer wanting to use `support-for` in your module, it's
+If you are a Sass module author wanting to use `support-for` in your module, it's
 quite easy to add it.
 
 ### Ruby Sass
