@@ -2,7 +2,7 @@
 
 The `support-for` module allows Sass authors to conditionally add support for specific browser versions to their Sass module or Sass partials.
 
-[autoprefixer](https://github.com/postcss/autoprefixer) is great for conditionally adding vendor prefixes, but sometimes you need more extensive CSS for specific versions of browsers. For example, adding px fallbacks to rem units when you need IE 8 support.
+[Autoprefixer](https://github.com/postcss/autoprefixer) is great for conditionally adding vendor prefixes, but sometimes you need more extensive CSS for specific versions of browsers. For example, adding px fallbacks to rem units when you need IE 8 support.
 
 Authors of Sass code with support-for can specify which browser versions they want to support by setting a simple Sass variable, `$support-for`.
 
