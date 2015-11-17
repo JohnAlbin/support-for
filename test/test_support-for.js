@@ -31,6 +31,13 @@ describe('@function support-for()', function() {
       });
     });
 
+    it('should support a browser by using the wildcard \'*\' browser version', function(done) {
+      sassyTest.renderFixture('wildcard-browser', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+
     it('should error when version is not a number', function(done) {
       sassyTest.renderFixture('error-browser-number', {}, function(error, result, expectedOutput) {
         error.should.exist;

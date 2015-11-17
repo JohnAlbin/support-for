@@ -6,9 +6,10 @@ $support-for: (
   ie:      9,
   opera:   -4,
   safari:  -4,
+  '*':     -4,
 ) !default;
 
-// Set the current version number for all browsers. As of: 2015-11-16
+// Set the current version number for all browsers. As of: 2015-11-17
 $support-for-current-browser-version: (
   chrome:  46,
   edge:    25,
@@ -35,8 +36,13 @@ $support-for-current-browser-version: (
   }
 
   // Check against declared minimums.
-  $min-version: if(map-has-key($support-for, $browser), map-get($support-for, $browser), null);
-  // @TODO: Add '*' browser to provide default minimum version.
+  $min-version: null;
+  @if map-has-key($support-for, $browser) {
+    $min-version: map-get($support-for, $browser);
+  }
+  @else if map-has-key($support-for, '*') {
+    $min-version: map-get($support-for, '*');
+  }
 
   // Ensure $min-version is an integer (or null).
   @if type-of($min-version) != "null" and type-of($min-version) != "number" {
