@@ -71,9 +71,9 @@ If you later drop support for IE 10 (someday!), you just need to update the
 `$support-for` variable and your code will stop outputting the IE-10-specific
 CSS.
 
-## Updating your module to use `support-for`
+## Updating your module to use support-for
 
-If you are a Sass module author wanting to use `support-for` in your module, it's
+If you are a Sass module author wanting to use **support-for** in your module, it's
 quite easy to add it as a dependency.
 
 ### Ruby Sass
