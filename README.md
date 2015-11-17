@@ -11,6 +11,9 @@ Here are some example usages:
 ```scss
 $support-for: (
   safari: 8,
+  '*':    null, // null means "no support" and is the
+                // default value for any browser not
+                // specified in $support-for
 );
 
 // Normalize-scss uses support-for.
@@ -22,7 +25,7 @@ $support-for: (
 ```scss
 $support-for: (
   '*': -4,
-  ie: 6,
+  ie:  6,
 );
 
 @import "normalize";
