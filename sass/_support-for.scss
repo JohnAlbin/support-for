@@ -31,7 +31,7 @@ $support-for-current-browser-version: (
 @function support-for($browser, $version) {
   // Ensure $version is an integer (or null).
   @if not (type-of($version) == "null" or type-of($version) == "number" and round($version) == $version) {
-    @error "The $version parameter of support-for() must be an integer; #{inspect($version)} given.";
+    @error "The $version parameter of support-for() must be an integer; #{type-of($version)} given.";
   }
 
   // Check against declared minimums.
@@ -49,7 +49,7 @@ $support-for-current-browser-version: (
   // Negative $min-version means "X most recent versions".
   @if type-of($min-version) == "number" and $min-version < 0 {
     @if not map-has-key($support-for-current-browser-version, $browser) {
-      @error "$support-for-current-browser-version: (#{$browser}: null) must be set to an integer.";
+      @error "#{$browser} not found in $support-for-current-browser-version map; it must be set to an integer.";
     }
     $min-version: map-get($support-for-current-browser-version, $browser) + $min-version + 1;
   }
