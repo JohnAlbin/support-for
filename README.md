@@ -8,43 +8,43 @@ Here are some example usages:
 
 1. The Sass author only wants to support Safari 8 and later (and no other browsers) because he is an asshole.
 
-```scss
-$support-for: (
-  safari: 8,
-  '*':    null, // null means "no support" and is the
-                // default value for any browser not
-                // specified in $support-for
-);
+        ```scss
+        $support-for: (
+          safari: 8,
+          '*':    null, // null means "no support" and is the
+                        // default value for any browser not
+                        // specified in $support-for
+        );
 
-// Normalize-scss uses support-for.
-@import "normalize";
-```
+        // Normalize-scss uses support-for.
+        @import "normalize";
+        ```
 
 2. The Sass author wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She also has to support IE 6 and later because the client hates her.
 
-```scss
-$support-for: (
-  '*': -4,
-  ie:  6,
-);
+        ```scss
+        $support-for: (
+          '*': -4,
+          ie:  6,
+        );
 
-@import "normalize";
-```
+        @import "normalize";
+        ```
 
 3. The Sass author is working for a government client and every browser version has a specific version specified in the contract.
 
-```scss
-$support-for: (
-  chrome:  29,
-  edge:    20,
-  firefox: 26,
-  ie:      8,
-  opera:   14,
-  safari:  5,
-);
+        ```scss
+        $support-for: (
+          chrome:  29,
+          edge:    20,
+          firefox: 26,
+          ie:      8,
+          opera:   14,
+          safari:  5,
+        );
 
-@import "normalize";
-```
+        @import "normalize";
+        ```
 
 ### Update your Sass partials to use `support-for()`
 
