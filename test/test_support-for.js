@@ -24,6 +24,13 @@ describe('@function support-for()', function() {
       });
     });
 
+    it('should not support a browser when version is null', function(done) {
+      sassyTest.renderFixture('null-version', {}, function(error, result, expectedOutput) {
+        should.not.exist(error);
+        done();
+      });
+    });
+
     it('should error when version is not a number', function(done) {
       sassyTest.renderFixture('error-browser-number', {}, function(error, result, expectedOutput) {
         error.should.exist;

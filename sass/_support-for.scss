@@ -54,5 +54,5 @@ $support-for-current-browser-version: (
     $min-version: map-get($support-for-current-browser-version, $browser) + $min-version + 1;
   }
 
-  @return ($min-version and ($version >= $min-version));
+  @return if(($min-version and ($version >= $min-version)), true, false);
 }
