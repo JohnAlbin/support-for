@@ -9,7 +9,7 @@ global.sassyTest = require('sassy-test');
 before(function(done) {
   sassyTest.configurePaths({
     // Path to Sass library.
-    library: path.join(__dirname, '../sass')
+    includePaths: [path.join(__dirname, '../sass')]
   });
   done();
 });
