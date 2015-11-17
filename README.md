@@ -1,8 +1,10 @@
 # support-for
 
-The `support-for` module is designed to be used by Sass authors to ease conditional browser support while creating their Sass module or Sass partial.
+The `support-for` module allows Sass authors to conditionally add support for specific browser versions to their Sass module or Sass partials.
 
-Authors of Sass code that uses support-for can specify which browser versions they want to support by setting a simple Sass variable, `$support-for`.
+[autoprefixer](https://github.com/postcss/autoprefixer) is great for conditionally adding vendor prefixes, but sometimes you need more extensive CSS for specific versions of browsers. For example, adding px fallbacks to rem units when you need IE 8 support.
+
+Authors of Sass code with support-for can specify which browser versions they want to support by setting a simple Sass variable, `$support-for`.
 
 Here are some example usages:
 
@@ -16,7 +18,8 @@ Here are some example usages:
                         // specified in $support-for
         );
 
-        // Normalize-scss uses support-for.
+        // Normalize-scss uses support-for to conditionally
+        // output CSS for old and new browsers.
         @import "normalize";
         ```
 
@@ -48,9 +51,9 @@ Here are some example usages:
 
 ### Update your Sass partials to use `support-for()`
 
-If a Sass module tells you that it uses `support-for`, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above about some of your options.
+If a Sass module tells you that it uses `support-for`, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above to see some of your options.
 
-If, however, you want to conditionally include Sass in your CSS output, you can update your Sass code to wrap those lines of CSS with an `@if` block that uses the `support-for()` function.
+If, however, you want to conditionally include Sass in the stylesheets you author, you can update your Sass code to wrap those lines of Sass with an `@if` block that uses the `support-for()` function.
 
 ```
 @mixin my-sweet-sweet-mixin($cocoa: lots) {
@@ -78,13 +81,13 @@ quite easy to add it.
 Alter your `my-module.gemspec` file:
 
 1. Find the line for your module's Sass dependency. It should look similar to this:
-  ```
-  s.add_runtime_dependency('sass', '~> 3.3')
-  ```
+        ```
+        spec.add_runtime_dependency('sass', '~> 3.3')
+        ```
 2. Just after that line, add this:
-  ```
-  s.add_runtime_dependency('support-for', '~> 1.0')
-  ```
+        ```
+        spec.add_runtime_dependency('support-for', '~> 1.0')
+        ```
 
 ### NPM (and node-sass)
 
