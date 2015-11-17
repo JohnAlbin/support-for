@@ -17,6 +17,9 @@
     "support"
   ],
   "main": "sass/_support-for.scss",
+  "eyeglass": {
+    "exports": "eyeglass-exports.js"
+  },
   "scripts": {
     "test": "mocha",
     "posttest": "eslint test"

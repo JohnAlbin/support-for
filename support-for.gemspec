@@ -20,7 +20,10 @@ Gem::Specification.new do |spec|
 
   spec.files       = `git ls-files`.split($/).select {|f| File.exist?(f) && f =~ %r{^(lib|sass)/} }
   spec.files       += %w(
+    bower.json
+    eyeglass-exports.js
     LICENSE.md
+    package.json
     README.md
     support-for.gemspec
   )
