@@ -85,3 +85,5 @@ Inside your Sass partials you can wrap some lines of CSS with an `@if` block tha
   }
 }
 ```
+
+[![Build Status](https://travis-ci.org/JohnAlbin/support-for.png?branch=master)](https://travis-ci.org/JohnAlbin/support-for)
