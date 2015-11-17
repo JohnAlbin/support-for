@@ -1,6 +1,6 @@
 # support-for
 
-The `support-for` module allows Sass authors to conditionally add support for specific browser versions to their Sass module or Sass partials.
+The **support-for** module allows Sass authors to conditionally add support for specific browser versions to their Sass module or Sass partials.
 
 [Autoprefixer](https://github.com/postcss/autoprefixer) is great for conditionally adding vendor prefixes, but sometimes you need more extensive CSS for specific versions of browsers. For example, adding px fallbacks to rem units when you need IE 8 support.
 
@@ -51,7 +51,7 @@ $support-for: (
 
 ### Update your Sass partials to use `support-for()`
 
-If a Sass module tells you that it uses `support-for`, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above to see some of your options.
+If a Sass module tells you that it uses **support-for**, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above to see some of your options.
 
 If, however, you want to conditionally include Sass in the stylesheets you author, you can update your Sass code to wrap those lines of Sass with an `@if` block that uses the `support-for()` function.
 
@@ -74,7 +74,7 @@ CSS.
 ## Updating your module to use `support-for`
 
 If you are a Sass module author wanting to use `support-for` in your module, it's
-quite easy to add it.
+quite easy to add it as a dependency.
 
 ### Ruby Sass
 
@@ -96,14 +96,15 @@ spec.add_runtime_dependency('support-for', '~> 1.0')
 
 Add your dependency with the following command:
 
-```
+```bash
 npm install --save support-for
 ```
 
 ### Bower
 
 Add your dependency with the following command:
-```
+
+```bash
 bower install --save support-for
 ```
 
