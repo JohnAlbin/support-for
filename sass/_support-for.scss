@@ -1,11 +1,11 @@
 // Support the last 4 versions of all browsers except IE.
 $support-for: (
-  chrome:  43,
-  edge:    22,
-  firefox: 39,
+  chrome:  -4,
+  edge:    -4,
+  firefox: -4,
   ie:      9,
-  opera:   30,
-  safari:  6,
+  opera:   -4,
+  safari:  -4,
 ) !default;
 
 // Set the current version number for all browsers. As of: 2015-11-16
