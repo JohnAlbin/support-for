@@ -20,7 +20,7 @@ $support-for: (
 @import "normalize";
 ```
 
-2. The Sass developer wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She has has to support IE 6 and later because the client hates her.
+2. The Sass developer wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She also has to support IE 6 and later because the client hates her.
 
 ```scss
 $support-for: (
@@ -46,7 +46,34 @@ $support-for: (
 @import "normalize";
 ```
 
+### Update your Sass partials to use `support-for`
+
+If a Sass module tells you that it uses `support-for`, you just need to override
+the default value of the $support-for variable before you import that module.
+See the examples above about some of your options.
+
+If you want to conditionally include Sass in your CSS output, you can update
+your Sass partials to wrap those lines of CSS with an `@if` block that uses the
+`support-for()` function.
+
+```
+@mixin my-sweet-sweet-mixin($cocoa: lots) {
+  border-radius: 100%;
+  @if support-for(ie, 10) {
+    // Remove border when applied to an `img` inside an `a` element in IE 8/9/10.
+    border: 0;
+  }
+}
+```
+
+If you later drop support for IE 10 (someday!), you just need to update the
+`$support-for` variable and your code will stop outputing the IE-10-specific
+CSS.
+
 ## Updating your module to use `support-for`
+
+If you are a module developer wanting to use `support-for` in your module, it's
+quite easy to add it.
 
 ### Ruby Sass
 
@@ -73,20 +100,6 @@ npm install --save support-for
 Add your dependency with the following command:
 ```
 bower install --save support-for
-```
-
-### Update your Sass partials
-
-Inside your Sass partials you can wrap some lines of CSS with an `@if` block that uses the `support-for()` function.
-
-```
-@mixin my-sweet-sweet-mixin($cocoa: lots) {
-  border-radius: 100%;
-  @if support-for(ie, 10) {
-    // Remove border when applied to an `img` inside an `a` element in IE 8/9/10.
-    border: 0;
-  }
-}
 ```
 
 [![Build Status](https://travis-ci.org/JohnAlbin/support-for.png?branch=master)](https://travis-ci.org/JohnAlbin/support-for)
