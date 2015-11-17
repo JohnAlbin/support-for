@@ -1,6 +1,6 @@
 {
   "name": "support-for",
-  "description": "A module for Sass module developers to ease conditional browser support.",
+  "description": "Allows Sass authors to conditionally add support for specific browser versions.",
   "main": "sass/_support-for.scss",
   "authors": [
     "John Albin Wilkins <virtually.johnalbin@gmail.com> (http://john.albin.net/)"
