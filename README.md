@@ -10,44 +10,44 @@ Here are some example usages:
 
 1. The Sass author only wants to support Safari 8 and later (and no other browsers) because he is an asshole.
 
-        ```scss
-        $support-for: (
-          safari: 8,
-          '*':    null, // null means "no support" and is the
-                        // default value for any browser not
-                        // specified in $support-for
-        );
+ ```scss
+$support-for: (
+  safari: 8,
+  '*':    null, // null means "no support" and is the
+                // default value for any browser not
+                // specified in $support-for
+);
 
-        // Normalize-scss uses support-for to conditionally
-        // output CSS for old and new browsers.
-        @import "normalize";
-        ```
+// Normalize-scss uses support-for to conditionally
+// output CSS for old and new browsers.
+@import "normalize";
+```
 
 2. The Sass author wants to support the 4 most recent versions of all browsers which she can do by setting the wildcard browser, `'*'`. She also has to support IE 6 and later because the client hates her.
 
-        ```scss
-        $support-for: (
-          '*': -4,
-          ie:  6,
-        );
+ ```scss
+$support-for: (
+  '*': -4,
+  ie:  6,
+);
 
-        @import "normalize";
-        ```
+@import "normalize";
+```
 
 3. The Sass author is working for a government client and every browser version has a specific version specified in the contract.
 
-        ```scss
-        $support-for: (
-          chrome:  29,
-          edge:    20,
-          firefox: 26,
-          ie:      8,
-          opera:   14,
-          safari:  5,
-        );
+ ```scss
+$support-for: (
+  chrome:  29,
+  edge:    20,
+  firefox: 26,
+  ie:      8,
+  opera:   14,
+  safari:  5,
+);
 
-        @import "normalize";
-        ```
+@import "normalize";
+```
 
 ### Update your Sass partials to use `support-for()`
 
@@ -55,7 +55,7 @@ If a Sass module tells you that it uses `support-for`, you just need to override
 
 If, however, you want to conditionally include Sass in the stylesheets you author, you can update your Sass code to wrap those lines of Sass with an `@if` block that uses the `support-for()` function.
 
-```
+```scss
 @mixin my-sweet-sweet-mixin($cocoa: lots) {
   border-radius: 100%;
 
@@ -82,18 +82,20 @@ Alter your `my-module.gemspec` file:
 
 1. Find the line for your module's Sass dependency. It should look similar to this:
 
-        ```
-        spec.add_runtime_dependency('sass', '~> 3.3')
-        ```
+ ```ruby
+spec.add_runtime_dependency('sass', '~> 3.3')
+```
+
 2. Just after that line, add this:
 
-        ```
-        spec.add_runtime_dependency('support-for', '~> 1.0')
-        ```
+ ```ruby
+spec.add_runtime_dependency('support-for', '~> 1.0')
+```
 
 ### NPM (and node-sass)
 
 Add your dependency with the following command:
+
 ```
 npm install --save support-for
 ```
