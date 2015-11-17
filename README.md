@@ -81,10 +81,12 @@ quite easy to add it.
 Alter your `my-module.gemspec` file:
 
 1. Find the line for your module's Sass dependency. It should look similar to this:
+
         ```
         spec.add_runtime_dependency('sass', '~> 3.3')
         ```
 2. Just after that line, add this:
+
         ```
         spec.add_runtime_dependency('support-for', '~> 1.0')
         ```
