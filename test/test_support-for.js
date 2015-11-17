@@ -18,7 +18,7 @@ describe('@function support-for()', function() {
     });
 
     it('should support last X versions when given a negative version', function(done) {
-      sassyTest.renderFixture('negative-values', {}, function(error, result, expectedOutput) {
+      sassyTest.renderFixture('negative-version', {}, function(error, result, expectedOutput) {
         should.not.exist(error);
         done();
       });
