@@ -49,6 +49,21 @@ Here are some example usages:
   @import "normalize";
 ```
 
+By the way, here's the default value of `$support-for`:
+
+```scss
+// Support the last 4 versions of all browsers except IE.
+$support-for: (
+  chrome:  -4,
+  edge:    -4,
+  firefox: -4,
+  ie:      9,
+  opera:   -4,
+  safari:  -4,
+  '*':     -4,
+) !default;
+```
+
 ### Update your Sass partials to use `support-for()`
 
 If a Sass module tells you that it uses **support-for**, you just need to override the default value of the `$support-for` variable before you import that module. See the examples above to see some of your options.
