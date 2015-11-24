@@ -1,6 +1,6 @@
 {
   "name": "support-for",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Allows Sass authors to conditionally add support for specific browser versions.",
   "homepage": "https://github.com/JohnAlbin/support-for",
   "bugs": {
