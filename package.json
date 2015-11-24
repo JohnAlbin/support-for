@@ -12,8 +12,9 @@
   },
   "author": "John Albin Wilkins <virtually.johnalbin@gmail.com> (http://john.albin.net/)",
   "keywords": [
+    "support-for",
     "sass",
-    "browser",
+    "browser support",
     "support"
   ],
   "main": "sass/_support-for.scss",
