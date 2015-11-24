@@ -12,6 +12,7 @@
   },
   "author": "John Albin Wilkins <virtually.johnalbin@gmail.com> (http://john.albin.net/)",
   "keywords": [
+    "eyeglass-module",
     "support-for",
     "sass",
     "browser support",
@@ -19,7 +20,8 @@
   ],
   "main": "sass/_support-for.scss",
   "eyeglass": {
-    "exports": "eyeglass-exports.js"
+    "exports": "eyeglass-exports.js",
+    "needs": "^0.7.1"
   },
   "scripts": {
     "test": "mocha",
