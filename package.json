@@ -21,7 +21,7 @@
   "main": "sass/_support-for.scss",
   "eyeglass": {
     "exports": "eyeglass-exports.js",
-    "needs": "^0.7.1"
+    "needs": "*"
   },
   "scripts": {
     "test": "mocha",
