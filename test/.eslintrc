@@ -7,9 +7,9 @@
     "node": true
   },
   "globals": {
+    "expect": true,
     "path": true,
-    "sassyTest": true,
-    "should": true
+    "SassyTest": true
   },
   "rules": {
     // Errors.
