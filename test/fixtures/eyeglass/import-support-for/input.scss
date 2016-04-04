@@ -1,0 +1,14 @@
+@import 'support-for';
+
+.test {
+  @if support-for(chrome, 1) {
+    example: 'chrome 1';
+  } @else {
+    example: 'no chrome 1';
+  }
+  @if support-for(chrome, 1000) {
+    example: 'chrome 1000';
+  } @else {
+    example: 'no chrome 1000';
+  }
+}
