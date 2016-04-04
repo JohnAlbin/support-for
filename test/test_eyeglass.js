@@ -1,17 +1,15 @@
 'use strict';
 
-var Eyeglass = require('eyeglass').Eyeglass;
-var sass = require('node-sass');
-
+var eyeglass = require('eyeglass');
 var sassyTest = new SassyTest({
   fixtures: path.join(__dirname, 'fixtures/eyeglass')
 });
-var options = {
-  // Eyeglass will look in the root for a package.json.
-  root: sassyTest.fixture()
+var nodeSassOptions = {
+  eyeglass: {
+    // Eyeglass will look in the root for a package.json.
+    root: sassyTest.fixture()
+  }
 };
-var eyeglass = new Eyeglass(options, sass);
-
 
 describe('Eyeglass integration tests', function() {
   it('should fail to import support-for without Eyeglass', function() {
@@ -24,6 +22,6 @@ describe('Eyeglass integration tests', function() {
   });
 
   it('should import support-for with Eyeglass', function() {
-    return sassyTest.renderFixture('import-support-for', eyeglass.sassOptions());
+    return sassyTest.renderFixture('import-support-for', eyeglass(nodeSassOptions));
   });
 });
