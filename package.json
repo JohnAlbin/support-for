@@ -30,7 +30,7 @@
   "license": "GPL-2.0",
   "devDependencies": {
     "chai": "^3.4.1",
-    "eslint": "^1.9.0",
+    "eslint": "^2.6.0",
     "eyeglass": "^0.7.0",
     "mocha": "^2.3.4",
     "node-sass": "^3.4.2",
