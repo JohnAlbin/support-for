@@ -33,6 +33,7 @@
     "eslint": "^1.9.0",
     "eyeglass": "^0.7.0",
     "mocha": "^2.3.4",
+    "node-sass": "^3.4.2",
     "sassy-test": "^3.0.3"
   }
 }
