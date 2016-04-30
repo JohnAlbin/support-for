@@ -9,11 +9,11 @@ $support-for: (
   '*':     -4,
 ) !default;
 
-// Set the current version number for all browsers. As of: 2016-04-04
+// Set the current version number for all browsers. As of: 2016-04-30
 $support-for-current-browser-version: (
-  chrome:  49, // https://en.wikipedia.org/wiki/Google_Chrome_release_history
+  chrome:  50, // https://en.wikipedia.org/wiki/Google_Chrome_release_history
   edge:    25, // https://en.wikipedia.org/wiki/Microsoft_Edge
-  firefox: 45, // https://en.wikipedia.org/wiki/Firefox_release_history
+  firefox: 46, // https://en.wikipedia.org/wiki/Firefox_release_history
   ie:      11, // https://en.wikipedia.org/wiki/Internet_Explorer_versions
   opera:   36, // https://en.wikipedia.org/wiki/Opera_(web_browser)
   safari:  9,  // https://en.wikipedia.org/wiki/Safari_version_history
