@@ -52,12 +52,12 @@ Here are some example usages:
 By the way, here's the default value of `$support-for`:
 
 ```scss
-// Support the last 4 versions of all browsers except IE.
+// Support the last 4 versions of all browsers except IE, Edge, and Firefox.
 $support-for: (
   chrome:  -4,
-  edge:    -4,
-  firefox: -4,
-  ie:      9,
+  edge:    25, // Current Windows Server and Xbox One version.
+  firefox: 45, // Version 45 has "extended support" until June 13, 2017.
+  ie:      9,  // EOL dates - IE9: 2017/04/11; IE10: EOL; IE11: 2023/01/10.
   opera:   -4,
   safari:  -4,
   '*':     -4,
