@@ -8,7 +8,7 @@ var sassyTest = new SassyTest({
 
 describe('@function support-for()', function() {
   describe('$support-for variable', function() {
-    it('should, by default, support last 4 versions of all browsers except IE 8', function() {
+    it('should, by default, support last 4 versions of all browsers except IE, Edge and Firefox', function() {
       return sassyTest.renderFixture('defaults');
     });
 

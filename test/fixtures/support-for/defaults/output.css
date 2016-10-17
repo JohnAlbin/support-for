@@ -6,12 +6,16 @@
 .test-edge {
   version-3: true;
   version-4: true;
-  version-5: false; }
+  version-5: true;
+  version25: true;
+  version24: false; }
 
 .test-firefox {
   version-3: true;
   version-4: true;
-  version-5: false; }
+  version-5: true;
+  version45: true;
+  version44: false; }
 
 .test-ie {
   version-3: true;

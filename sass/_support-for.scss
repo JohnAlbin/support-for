@@ -1,22 +1,22 @@
 // Support the last 4 versions of all browsers except IE.
 $support-for: (
   chrome:  -4,
-  edge:    -4,
-  firefox: -4,
+  edge:    25, // Current Windows Server & Xbox One version.
+  firefox: 45, // Version 45 has "extended support" until June 13, 2017.
   ie:      9,
   opera:   -4,
   safari:  -4,
   '*':     -4,
 ) !default;
 
-// Set the current version number for all browsers. As of: 2016-04-30
+// Set the current version number for all browsers. As of: 2016-10-17
 $support-for-current-browser-version: (
-  chrome:  50, // https://en.wikipedia.org/wiki/Google_Chrome_release_history
-  edge:    25, // https://en.wikipedia.org/wiki/Microsoft_Edge
-  firefox: 46, // https://en.wikipedia.org/wiki/Firefox_release_history
+  chrome:  54, // https://en.wikipedia.org/wiki/Google_Chrome_release_history
+  edge:    38, // https://en.wikipedia.org/wiki/Microsoft_Edge
+  firefox: 49, // https://en.wikipedia.org/wiki/Firefox_version_history#Firefox_45.4_ESR
   ie:      11, // https://en.wikipedia.org/wiki/Internet_Explorer_versions
-  opera:   36, // https://en.wikipedia.org/wiki/Opera_(web_browser)
-  safari:  9,  // https://en.wikipedia.org/wiki/Safari_version_history
+  opera:   40, // https://en.wikipedia.org/wiki/Opera_(web_browser)
+  safari:  10, // https://en.wikipedia.org/wiki/Safari_version_history
 ) !default;
 
 

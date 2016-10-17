@@ -6,5 +6,14 @@
     version-3: support-for($browser, $min-version + 1);
     version-4: support-for($browser, $min-version);
     version-5: support-for($browser, $min-version - 1);
+
+    @if $browser == 'edge' {
+      version25: support-for($browser, 25);
+      version24: support-for($browser, 24);
+    }
+    @else if $browser == 'firefox' {
+      version45: support-for($browser, 45);
+      version44: support-for($browser, 44);
+    }
   }
 }
