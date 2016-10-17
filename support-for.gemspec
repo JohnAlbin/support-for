@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/JohnAlbin/support-for'
   spec.rubyforge_project =
 
-  spec.version     = '1.0.6'
-  spec.date        = '2016-04-30'
+  spec.version     = '1.0.7'
+  spec.date        = '2016-10-17'
   spec.licenses    = ['GPL-2.0']
 
   spec.authors     = ['John Albin Wilkins']
