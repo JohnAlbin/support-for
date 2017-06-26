@@ -32,7 +32,7 @@
   "license": "GPL-2.0",
   "devDependencies": {
     "chai": "^3.4.1",
-    "eslint": "^3.6.1",
+    "eslint": "^4.1.1",
     "eyeglass": "^1.1.2",
     "mocha": "^3.1.2",
     "sassy-test": "^3.0.3"
